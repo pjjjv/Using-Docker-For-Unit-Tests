@@ -17,7 +17,7 @@ Your Jenkins or other CI server would:
 In the case of this repo:
 
     cp script-to-test.py tests
-    push tests
+    pushd tests
     docker build -t my_test .  <-- note the period
     popd
     docker run -it my_test <arguments>
