@@ -2,9 +2,10 @@ FROM centos:centos7
 MAINTAINER Chris Collins <christopher.collins@duke.edu>
 
 RUN yum install -y python
-RUN mkdir /stuff_to_test
-ADD script-to-test.py /stuff_to_test/script-to-test.py
+RUN mkdir /stuff
+ADD program.py /stuff/program.py
+ADD test.py /stuff/test.py
 
-WORKDIR /stuff_to_test
+WORKDIR /stuff
 
-ENTRYPOINT [ "python", "script-to-test.py" ]
+ENTRYPOINT [ "python", "test.py" ]
